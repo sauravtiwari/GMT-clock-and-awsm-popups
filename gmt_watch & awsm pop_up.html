@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>awsome drum</title>
+<link rel="stylesheet" type="text/css" href="drum.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+<body>
+      <div id="keywordA">
+      	<kbd>A</kbd>
+      </div>
+      <div id="keywordB">
+      	<kbd>B</kbd>
+      </div>
+      <div id="keywordC" data-key="67">
+      	<kbd>C</kbd>
+      </div>
+      <div id="keywordD" data-key="68">
+      	<kbd>D</kbd>
+      </div>
+      <div id="keywordE" data-key="69">
+      	<kbd>E</kbd>
+      </div>
+       <div id="keywordF" data-key="70">
+       	<kbd>F</kbd>
+       </div>
+
+       <audio id="keywordA" src="172707__axtoncrolley__nodens-field-song.mp3"></audio>
+       <audio id="keywordB" src="Eric_Carlson_-_Tunnel_Birds.mp3"></audio>
+       <audio data-key="67" src="Hard_TON_-_07_-_Choc-ice_Dance.mp3"></audio>
+       <audio data-key="68" src="John_Wesley_Coleman_-_07_-_Tequila_10_Seconds.mp3"></audio>
+       <audio data-key="69" src="The_Books_-_Buzz_Note.mp3"></audio>
+       <audio data-key="70" src="horse.ogg" type="audio/ogg"></audio>
+
+       <div id="dateandtime"></div>
+       <script type="text/javascript">
+            
+       setInterval(getdateandtime, 1000);
+
+         getdateandtime();
+
+       function getdateandtime()
+       {
+       	document.getElementById("dateandtime").innerHTML = 	new Date();
+       }
+
+<!--
+function zoomin(){
+        var myImg = document.getElementById("keywordA");
+        var currWidth = myImg.clientWidth;
+        if(currWidth == 500){
+            alert("Maximum zoom-in level reached.");
+        } else{
+            myImg.style.width = (currWidth + 50) + "px";
+        } 
+    }
+    function zoomout(){
+        var myImg = document.getElementById("keywordB");
+        var currWidth = myImg.clientWidth;
+        if(currWidth == 50){
+            alert("Maximum zoom-out level reached.");
+        } else{
+            myImg.style.width = (currWidth - 50) + "px";
+        }
+    }
+ 
+//-->
+       </script>
+
+       <input type="button" value="Zoom In" OnClick="zoomin();" />
+       <input type="button" value="Zoom Out" OnClick="zoomout();" />
+</body>
+
+<script type="text/javascript" src="drum.js"></script>
+
+</html>
